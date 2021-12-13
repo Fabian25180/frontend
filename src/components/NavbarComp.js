@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
-import { Navbar, NavDropdown, Form, FormControl, Button, Nav, Container } from 'react-bootstrap'
+import { Navbar, NavDropdown, Form, FormControl, Button, Nav, Container} from 'react-bootstrap'
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link
 } from "react-router-dom";
-import {AiOutlineHome} from 'react-icons'
+import { FaBell, FaHome } from 'react-icons/fa'
+import { FiSettings } from 'react-icons/fi'
+
 
 import Home from './Home';
 import CustomSettings from './CustomSettings';
@@ -19,7 +21,7 @@ export default class NavbarComp extends Component {
             <Router>
                 <div>
                     <Navbar bg="dark" variant={"dark"} expand="lg">
-                            <Navbar.Brand href="#">Projekt22</Navbar.Brand>
+                            <Navbar.Brand href="#" className='padding-brand'>Projekt22</Navbar.Brand>
                             <Navbar.Toggle aria-controls="navbarScroll" />
                             <Navbar.Collapse id="navbarScroll">
                             <Nav
@@ -27,9 +29,8 @@ export default class NavbarComp extends Component {
                                     style={{ maxHeight: '100px' }}
                                     navbarScroll
                             >
-                                    
-                                <Nav.Link as={Link} to="/home" >Startseite</Nav.Link>
-                            
+                                
+                                <Nav.Link as={Link} to="/home" ><FaHome className="icons"/></Nav.Link>
                             </Nav>    
                             <Form className="d-flex mx-auto">
                                     <FormControl
@@ -47,15 +48,16 @@ export default class NavbarComp extends Component {
                                     style={{ maxHeight: '100px' }}
                                     navbarScroll
                                 >
-                                    <Nav.Link as={Link} to="/settings">Benachrichtigungen</Nav.Link>
-                                    <NavDropdown title="Einstellungen" id="navbarScrollingDropdown" className='nav-padding'>
-                                        <NavDropdown.Item as={Link} to="/custom-settings">Kontoeinstellungen</NavDropdown.Item>
-                                        <NavDropdown.Item as={Link} to="/general-settings" >Benutzerverwaltung</NavDropdown.Item>
+                                    <Nav.Link as={Link} to="/settings"><FaBell className="icons"/></Nav.Link>
+                                    <NavDropdown title={<FiSettings className="icons"/>} id="navbarScrollingDropdown" className="btn-group dropstart nav-padding" >
+                                        <NavDropdown.Item as={Link} to="/custom-settings" className='nav-padding'>Kontoeinstellungen</NavDropdown.Item>
+                                        <NavDropdown.Item as={Link} to="/general-settings">Benutzerverwaltung</NavDropdown.Item>
                                         <NavDropdown.Divider />
                                         <NavDropdown.Item href="#action5">
                                             Ausloggen
                                         </NavDropdown.Item>
                                     </NavDropdown>
+
                                 </Nav>
                                 
                             </Navbar.Collapse>

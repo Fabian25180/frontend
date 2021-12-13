@@ -7,8 +7,33 @@
   padding: 7px 14px;
 }
 
+.nav-padding {
+  padding-right: 40px;
+  padding-left: 2px;
+}
 
+.dropdown-toggle:after {
+  display: none !important; 
+}
+
+.padding-brand{
+  margin-left: 15px;
+}
 /****************************************************************Navbar*************************************************************************/
+/************************************************************Icons-navbar**********************************************************************/
+
+.searchbar{
+  border-radius: 0;
+}
+.icons{
+  /*padding-top: -1px;*/
+  width: 40px;
+  height: 25px;
+  padding-bottom: 5px;
+}
+
+
+/************************************************************Icons-navbar**********************************************************************/
 /************************************************************Login secured**********************************************************************/
 .back {
   background: #e2e2e2;
@@ -40,11 +65,9 @@ div.content {
   display: table-cell;
   vertical-align: middle;
 }
-.btn btn-primary{
-color: green;
-}
+
+/*198754 Farbe des Gruens fuer den Login Button*/
+
 /************************************************************Login secured**********************************************************************/
 
-.nav-padding {
-  padding: 0px 30px;
-}
+

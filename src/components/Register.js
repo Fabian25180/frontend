@@ -4,7 +4,7 @@ export default class Register extends Component {
     render() {
         return (
             <div className="App">
-                {/*<form>
+                <form>
                     <div class="back">
 
 
@@ -25,7 +25,7 @@ export default class Register extends Component {
                                         <label for="exampleInputPassword1">Password</label>
                                         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password"></input>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Login</button>
+                                    <button type="submit" class="btn btn-success">Login</button>
                                     <hr />
                                     <button type="button" class="btn btn-link">Signup</button>
                                     <button type="button" class="btn btn-link">Reset Password</button>
@@ -37,7 +37,7 @@ export default class Register extends Component {
 
                         </div>
                     </div>
-                </form>*/}
+                </form>
             </div>
         )
     }
