@@ -6,6 +6,7 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import {AiOutlineHome} from 'react-icons'
 
 import Home from './Home';
 import CustomSettings from './CustomSettings';
@@ -18,48 +19,47 @@ export default class NavbarComp extends Component {
             <Router>
                 <div>
                     <Navbar bg="dark" variant={"dark"} expand="lg">
-                        <Container fluid-left>
                             <Navbar.Brand href="#">Projekt22</Navbar.Brand>
                             <Navbar.Toggle aria-controls="navbarScroll" />
                             <Navbar.Collapse id="navbarScroll">
-                            <Container fluid>
+                            <Nav
+                                    
+                                    style={{ maxHeight: '100px' }}
+                                    navbarScroll
+                            >
+                                    
+                                <Nav.Link as={Link} to="/home" >Startseite</Nav.Link>
+                            
+                            </Nav>    
+                            <Form className="d-flex mx-auto">
+                                    <FormControl
+                                        type="search"
+                                        placeholder="Suchen..."
+                                        className="me-2"
+                                        aria-label="Search"
+                                        style={{maxWidth:'1000px'}}
+                                        style={{minWidth:'160%'}}
+                                    />
+                                    <Button variant="outline-success">Suchen</Button>
+                            </Form>
                                 <Nav
-                                    className=" ml- my-2 my-lg-0 "
+                                    className="ms-auto "
                                     style={{ maxHeight: '100px' }}
                                     navbarScroll
                                 >
-                                    <Nav.Link as={Link} to="/home" >Home</Nav.Link>
-                                </Nav>   
-                            </Container>
-                            <Container fluid class="mx-auto w-35 p-3" >
-                            <Form className="d-flex">
-                                    <FormControl
-                                        type="search"
-                                        placeholder="Search"
-                                        className="me-2"
-                                        aria-label="Search"
-                                        
-                                    />
-                                    <Button variant="outline-success">Search</Button>
-                            </Form>
-                            </Container>
-                            <Container fluid-right>
-                                <Nav>
-                                    <Nav.Link as={Link} to="/settings">Settings</Nav.Link>
-                                            <NavDropdown title="Link" id="navbarScrollingDropdown">
-                                                <NavDropdown.Item as={Link} to="/custom-settings">Custom-Settings</NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/notification" >Notification</NavDropdown.Item>
-                                                <NavDropdown.Divider />
-                                                <NavDropdown.Item href="#action5">
-                                                    Something else here
-                                                </NavDropdown.Item>
-                                            </NavDropdown>
-                                    <Nav.Link href="#" disabled>Link</Nav.Link>
-                                    <Nav.Link as={Link} to="/notifications">notifications</Nav.Link>
+                                    <Nav.Link as={Link} to="/settings">Benachrichtigungen</Nav.Link>
+                                    <NavDropdown title="Einstellungen" id="navbarScrollingDropdown" className='nav-padding'>
+                                        <NavDropdown.Item as={Link} to="/custom-settings">Kontoeinstellungen</NavDropdown.Item>
+                                        <NavDropdown.Item as={Link} to="/general-settings" >Benutzerverwaltung</NavDropdown.Item>
+                                        <NavDropdown.Divider />
+                                        <NavDropdown.Item href="#action5">
+                                            Ausloggen
+                                        </NavDropdown.Item>
+                                    </NavDropdown>
                                 </Nav>
-                            </Container>                 
+                                
                             </Navbar.Collapse>
-                        </Container>
+
                     </Navbar>
                 </div>
                 <div>
