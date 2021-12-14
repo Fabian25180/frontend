@@ -4,6 +4,7 @@ export default class Register extends Component {
     render() {
         return (
             <div className="App">
+                {/*
                 <form>
                     <div class="back">
 
@@ -16,6 +17,7 @@ export default class Register extends Component {
 
                                 <h3>Login</h3>
                                 <hr />
+                                
                                 <form>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Email address</label>
@@ -30,14 +32,15 @@ export default class Register extends Component {
                                     <button type="button" class="btn btn-link">Signup</button>
                                     <button type="button" class="btn btn-link">Reset Password</button>
 
-                </form>
-
+                                </form>
+                                }
                             </div>
 
 
                         </div>
                     </div>
                 </form>
+                */}
             </div>
         )
     }
